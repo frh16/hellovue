@@ -5,15 +5,16 @@
       <el-container>
         <el-aside width="200px">
           <el-menu
-                  default-active="2"
+                  default-active="/disk/stability"
                   class="el-menu-vertical-demo"
                   @open="handleOpen"
-                  @close="handleClose">
-            <el-menu-item index="1">
+                  @close="handleClose"
+                  router>
+            <el-menu-item index="/disk/stability">
               <i class="el-icon-s-marketing"></i>
               <span slot="title">盘符稳定性</span>
             </el-menu-item>
-            <el-menu-item index="2">
+            <el-menu-item index="/disk/bvt">
               <i class="el-icon-s-data"></i>
               <span slot="title">盘符BVT</span>
             </el-menu-item>
@@ -28,7 +29,9 @@
           </el-menu>
         </el-aside>
         <el-container>
-          <el-main>Main</el-main>
+          <el-main>
+            <router-view/>
+          </el-main>
         </el-container>
       </el-container>
     </el-container>

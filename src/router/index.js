@@ -1,18 +1,23 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import DiskBVT from '../views/DiskBVT.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'index',
+    redirect: '/disk/stability'
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/disk/bvt',
+    name: 'DiskBVT',
+    component: DiskBVT
+  },
+  {
+    path: '/disk/stability',
+    name: 'DiskStability',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
